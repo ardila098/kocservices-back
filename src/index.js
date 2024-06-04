@@ -1,5 +1,14 @@
-import app from './app'
-import './database'
+import fs from 'fs';
+import https from 'https';
+import app from './app';
+import './database';
 
-app.listen(4000);
-console.log('server listen on port', 4000)
+const options = {
+  key: fs.readFileSync('/etc/letsencrypt/live/kocservices.us/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/kocservices.us/fullchain.pem'),
+  ca: fs.readFileSync('/etc/letsencrypt/live/kocservices.us/chain.pem')
+};
+
+https.createServer(options, app).listen(4000, () => {
+  console.log('HTTPS Server is running on port 4000');
+});
