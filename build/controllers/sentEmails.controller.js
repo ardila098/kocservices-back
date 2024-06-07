@@ -17,13 +17,15 @@ var sentEmails = exports.sentEmails = /*#__PURE__*/function () {
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          console.log(req);
-          newClient = new _SentEmails["default"]({
+          _context.next = 2;
+          return new _SentEmails["default"]({
             name: req.body.name,
             dot: req.body.dot,
             email: req.body.email,
             phone: req.body.phone
-          });
+          }).save();
+        case 2:
+          newClient = _context.sent;
           transporter = nodeMailer.createTransport({
             host: "smtp.gmail.com",
             port: "465",
@@ -54,7 +56,7 @@ var sentEmails = exports.sentEmails = /*#__PURE__*/function () {
               });
             }
           });
-        case 5:
+        case 6:
         case "end":
           return _context.stop();
       }
