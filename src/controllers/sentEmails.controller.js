@@ -3,13 +3,12 @@ import SentEmails from "../models/SentEmails";
 const nodeMailer = require("nodemailer");
 
 export const sentEmails = async (req, res) => {
-  console.log(req);
-  const newClient = new SentEmails({
+  const newClient = await new SentEmails({
     name: req.body.name,
     dot: req.body.dot,
     email: req.body.email,
     phone: req.body.phone,
-  });
+  }).save();
 
   const transporter = nodeMailer.createTransport({
     host: "smtp.gmail.com",
