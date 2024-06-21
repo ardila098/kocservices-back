@@ -15,15 +15,17 @@ export const sentEmails = async (req, res) => {
     port: "465",
     secure: true,
     auth: {
-      user: "ardilajr098@gmail.com",
-      pass: "dodnrtogblrgizij",
+      user: "larangoinsurance@gmail.com",
+      // pass: "dodnrtogblrgizij",
+      pass: "eodkxkcgxsailwki",
+
+      
     },
   });
 
   let mail = {
     from: "",
-    // to: "larangoinsurance@gmail.com",
-    to: "ardilajr098@gmail.com",
+    to: "larangoinsurance@gmail.com",
     subjet: "clients insurances",
     Text: "ardila prueba",
     html: `
