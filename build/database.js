@@ -2,7 +2,7 @@
 
 var mongoose = require("mongoose");
 require("dotenv").config();
-var mongoURL = process.env.MONGO_URL || "mongodb://localhost/insurancedb";
+var mongoURL = process.env.MONGO_URL || "mongodb://127.0.0.1:27017/insurancedb";
 mongoose.connect(mongoURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true

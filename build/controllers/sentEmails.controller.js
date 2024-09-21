@@ -31,14 +31,14 @@ var sentEmails = exports.sentEmails = /*#__PURE__*/function () {
             port: "465",
             secure: true,
             auth: {
-              user: "ardilajr098@gmail.com",
-              pass: "dodnrtogblrgizij"
+              user: "larangoinsurance@gmail.com",
+              // pass: "dodnrtogblrgizij",
+              pass: "eodkxkcgxsailwki"
             }
           });
           mail = {
             from: "",
-            // to: "larangoinsurance@gmail.com",
-            to: "ardilajr098@gmail.com",
+            to: "larangoinsurance@gmail.com",
             subjet: "clients insurances",
             Text: "ardila prueba",
             html: "\n    <div>\n         <div>  <span>   name :  ".concat(newClient.name, "</span>    </div>\n             <div><span> dot :  ").concat(newClient.dot, "</span>    </div>\n            <div> <span> phone :  ").concat(newClient.phone, "</span>    </div>\n           <div> <span>  email :  ").concat(newClient.email, "</span>    </div>\n              </div>\n              ")
