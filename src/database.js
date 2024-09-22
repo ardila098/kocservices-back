@@ -2,9 +2,8 @@ const mongoose = require("mongoose");
 
 require("dotenv").config();
 
-const mongoURL =
-  process.env.MONGO_URL ||
-  "mongodb://admin:password@127.0.0.1:27017/insurancedb?authSource=admin";
+const mongoURL = process.env.MONGO_URL || "mongodb://127.0.0.1:27017/insurancedb";
+
 
 mongoose
   .connect(mongoURL, {
