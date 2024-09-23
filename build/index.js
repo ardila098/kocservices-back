@@ -29,7 +29,7 @@ app.get("/", function (req, res) {
 app.use("/api/sentEmails", _sentEmails["default"]);
 app.use("/api/auth", _auth["default"]);
 app.use("/api/users", _user["default"]);
-app.listen(3000, function () {
+app.listen(4000, function () {
   console.log("app runnig");
 });
 var _default = exports["default"] = app;

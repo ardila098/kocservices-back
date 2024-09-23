@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 app.use("/api/sentEmails", sentEmailsRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
-app.listen(3000, () => {
+app.listen(4000, () => {
   console.log("app runnig");
 });
 
